@@ -1,3 +1,10 @@
+# Travel Planning App
+
+This project is a full-stack travel planning application featuring:
+
+- **Backend:** Node.js/TypeScript with a GraphQL API for city suggestions, weather forecasts, and activity recommendations.
+- **Frontend:** React app that interacts with the backend via GraphQL.
+
 ## Architecture & Technical Choices
 
 **Backend:**
@@ -38,13 +45,6 @@ I used AI tools (such as ChatGPT and GitHub Copilot) to:
 - Assist with designing and implementing the algorithm for activity scoring based on weather data.
 
 All AI generated suggestions were reviewed and adapted using my own judgment to ensure code quality, and maintainability for the project goals.
-
-# Travel Planning App
-
-This project is a full-stack travel planning application featuring:
-
-- **Backend:** Node.js/TypeScript with a GraphQL API for city suggestions, weather forecasts, and activity recommendations.
-- **Frontend:** React app that interacts with the backend via GraphQL.
 
 Below are instructions to run both the backend and frontend locally, as well as a demo video.
 
