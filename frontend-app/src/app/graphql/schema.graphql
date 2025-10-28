@@ -1,0 +1,57 @@
+type CitySuggestion {
+  id: ID!
+  name: String!
+  country: String
+  admin1: String
+  latitude: Float!
+  longitude: Float!
+  timezone: String
+  distanceKm: Float
+}
+type HourlyPoint {
+  time: String!
+  temperature_2m: Float
+  precipitation: Float
+  wind_speed_10m: Float
+  cloudcover: Float
+  snowfall: Float
+}
+type DailyPoint {
+  date: String!
+  temperature_2m_max: Float
+  temperature_2m_min: Float
+  precipitation_sum: Float
+  snowfall_sum: Float
+  sunrise: String
+  sunset: String
+}
+type WeatherForecast {
+  latitude: Float!
+  longitude: Float!
+  timezone: String!
+  hourly: [HourlyPoint!]!
+  daily: [DailyPoint!]!
+}
+type ActivityScore {
+  activity: String!
+  score: Float!
+  reasons: [String!]
+}
+type ActivitiesRanking {
+  cityName: String!
+  generatedAt: String!
+  activityScores: [ActivityScore!]!
+}
+type Query {
+  citySuggestions(name: String!, limit: Int = 10, language: String = "en"): [CitySuggestion!]!
+  weatherByCoords(latitude: Float!, longitude: Float!, timezone: String = "auto", forecastDays: Int = 7): WeatherForecast!
+  activitiesRanking(cityName: String!, timezone: String = "auto", forecastDays: Int = 7): ActivitiesRanking!
+}
+"Exposes a URL that specifies the behavior of this scalar."
+directive @specifiedBy(
+    "The URL that specifies the behavior of this scalar."
+    url: String!
+  ) on SCALAR
+"Indicates exactly one field must be supplied and this field must not be `null`."
+directive @oneOf on INPUT_OBJECT
+
