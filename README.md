@@ -44,9 +44,9 @@ All AI generated suggestions were reviewed and adapted using my own judgment to 
 This project is a full-stack travel planning application featuring:
 
 - **Backend:** Node.js/TypeScript with a GraphQL API for city suggestions, weather forecasts, and activity recommendations.
-- **Frontend:** React app that interacts with the backend via GraphQL to provide a seamless travel planning experience.
+- **Frontend:** React app that interacts with the backend via GraphQL.
 
-Below are instructions to run both the backend and frontend locally, as well as information about the included demo video.
+Below are instructions to run both the backend and frontend locally, as well as a demo video.
 
 ## How to Run
 
@@ -87,8 +87,3 @@ A demo of the application is included in the root of this repository:
 
 You can view this GIF to see the application's features and user experience in action.
 
-## App Screenshot
-
-Below is a screenshot of the Travel Planner app in action:
-
-![Travel Planner Screenshot](./screenshot.png)
